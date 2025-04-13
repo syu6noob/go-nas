@@ -1,0 +1,10 @@
+services:
+  gonas:
+    build: .
+    container_name: gonas_container
+    ports:
+      - 80:80
+    volumes:
+      - ./:/app
+      - ./frontend/dist:/app/dist
+      - ./contents:/app/contents
