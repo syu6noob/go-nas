@@ -5,6 +5,5 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./frontend/dist:/app/frontend/dist
       - ./contents:/app/contents
       - ./.env:/app/.env

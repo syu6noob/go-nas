@@ -1,0 +1,7 @@
+.vscode
+.gitignore
+.env
+/frontend/*
+!/frontend/dist
+!/frontend/dist/**
+/contents
