@@ -8,8 +8,6 @@ import (
 	"os"
 	"path"
 	"path/filepath"
-
-	"github.com/joho/godotenv"
 )
 
 type ApiType struct {
@@ -42,8 +40,6 @@ type InfoType struct {
 }
 
 func GetContentDir() (string, error) {
-	godotenv.Load("./.env")
-
 	contentsFolder := os.Getenv("CONTENTS_FOLDER")
 	current, err := os.Getwd()
 	if err != nil {
@@ -54,8 +50,6 @@ func GetContentDir() (string, error) {
 }
 
 func getApiLink(t string, arg string) string {
-	godotenv.Load("./.env")
-
 	host := os.Getenv("API_HOST")
 	hostUrl, _ := url.Parse(host)
 

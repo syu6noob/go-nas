@@ -6,4 +6,13 @@ services:
       - 80:80
     volumes:
       - ./contents:/app/contents
-      - ./.env:/app/.env
+    environment:
+      - API_HOST=http://localhost/api/
+      - APP_HOST=http://localhost/
+      - DEV_APP_HOST=http://localhost/
+      - CONTENTS_FOLDER=./contents/
+      - GIN_MODE=release
+      - AUTH_SECRET=
+      - AUTH_REFRESH=
+      - AUTH_USERNAME=
+      - AUTH_PASSWORD=

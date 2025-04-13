@@ -2,12 +2,10 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
 )
 
 func CorsMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		godotenv.Load("./../.env")
 		// host := os.Getenv("DEV_APP_HOST")
 
 		c.Header("Access-Control-Allow-Origin", "*")
