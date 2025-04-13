@@ -19,5 +19,7 @@ RUN go mod tidy
 # build (switch to 1 to use the CGO SQLite)
 RUN CGO_ENABLED=0 go build -o /build
 
+EXPOSE 80
+
 # run
 CMD ["/build"]

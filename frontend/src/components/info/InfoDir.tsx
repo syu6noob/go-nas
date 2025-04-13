@@ -13,7 +13,8 @@ export default function InfoDir({
   const navigate = useNavigate()
 
   const judgeType = (mime: string): FileCategory => {
-    console.log(mime);
+    // console.log(mime);
+    if (mime.startsWith('image/')) return 'image';
     if (mime.startsWith('video/')) return 'video';
     if (mime.startsWith('audio/')) return 'audio';
     if (mime.startsWith('text/')) return 'text';

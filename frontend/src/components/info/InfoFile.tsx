@@ -47,7 +47,7 @@ export default function InfoFile({
       }
       {
         judgeType(data.mime) === "audio"
-          ? <audio className="w-full h-full" controls>
+          ? <audio className="w-full" controls>
               <source src={data.api.open} />
             </audio>
           : <></>
